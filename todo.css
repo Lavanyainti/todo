@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex; /* Add this to center content horizontally and vertically */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgb(4, 4, 64), rgb(57, 1, 57));
+  text-align: center;
+}
+
+.todo_app {
+  background-color: white;
+  padding: 20px; /* Add padding for spacing inside */
+  border-radius: 8px; /* Rounded corners for the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for effect*/
+  border-radius: 10px;
+  
+}
+.todo_app h2{
+  color: linear-gradient(135deg, rgb(4, 4, 64), rgb(240, 176, 240));
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.todo_app img{
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+.row{
+  margin-top: 20px;
+  background-color: rgb(229, 222, 222);
+  justify-content: center;
+  align-items: center;
+  padding: 1px;
+  border-radius: 20px;
+}
+.row input{
+  border-radius: 10px;
+  background-color: transparent;
+  border: none;
+  font-family:Arial, Helvetica, sans-serif;
+  outline: none;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.row button{
+  width: 80px;
+  padding: 12px;
+  border-radius: 20px;
+  background-color: rgb(249, 107, 56);
+  border: none;
+  margin-left: 20px;
+  color: white;
+  cursor: pointer;
+}
+.row button:hover{
+  border: 1px solid white;
+  
+}
+ul{
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+ul li{
+  position:relative;
+  list-style: none;
+  font-size: 17px;
+  cursor: pointer;
+  user-select: none;
+  padding: 15px 5px 8px 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+ul li::before{
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 5px;
+  transform: translateY(-50%); 
+  height: 20px;
+  width: 20px;
+  background-size: cover;
+  border-radius: 50%;
+  background-image: url(images/lsit\ circle.png);
+  background-position: center;
+}
+ul li.checked{
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before{
+  background-image: url(images/circle_checked.webp);
+}
+ul li span{
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+ul li span:hover{
+  background-color: #eee9e9;
+}
